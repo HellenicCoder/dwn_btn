@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!-- Coding by CodingNepal || www.codingnepalweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title> Download Button|| Yahya Nebgui</title>
+    <link rel="stylesheet" href="w.css" />
+     <!-- Boxicons CSS -->
+     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  </head>
+  <body>
+    <div class="button">
+        <div class="content">
+         <i class="bx bx-cloud-download"></i>
+         <span class="button-text">Download</span>
+        </div>
+    </div>
+
+    <script>
+        let button = document.querySelector(".button")
+
+        button.addEventListener("click", () => {
+            button.classList.add("active");
+
+            setTimeout(() => {
+              button.classList.remove("active");
+              document.querySelector("i").classList.replace("bx-cloud-download", "bx-check-circle");
+              document.querySelector(".button-text").innerText = "completed";
+            },6000)
+        })
+    </script>
+  </body>
+</html>
